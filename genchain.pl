@@ -14,7 +14,7 @@ print $transactions;
 # fine the proper chain
 # this is just a demo to give it 100 tries
 int $i; 
-for ($i=0; $i<100; $i++) {
+for ($i=0; $i<1000000; $i++) {
    # generate chain
    $chain = int(rand(10000));
    print "$i - chain: $chain\n";
@@ -33,7 +33,7 @@ for ($i=0; $i<100; $i++) {
 
    # this is the deciding factor if you can find THE CHAIN
    # if the value is less than 5000, then you found the chain
-   if ($value < 5000) { 
+   if ($value < 100){ 
       print "THE CHAIN: $chain\n";
       exit(); 
    }
